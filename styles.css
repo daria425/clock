@@ -1,0 +1,61 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: black;
+}
+.clock-container {
+  /* border: 5px solid; */
+  display: flex;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 6rem;
+  justify-content: center;
+  text-shadow: 0 0 5px #ff98ff, 0 0 15px #ff81ff, 0 0 20px #ff00d4,
+    0 0 40px #e100ff, 0 0 60px #f7b7e4, 0 0 10px #e100ff, 0 0 98px #ff00dd;
+  color: #ffbef6;
+}
+
+.clock {
+  width: 15rem;
+  height: 15rem;
+  border: 10px solid rgb(191, 56, 218);
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  /* box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+*/
+  box-shadow: 0 0 5px #ff98ff, 0 0 15px #ff81ff, 0 0 20px #ff00d4,
+    0 0 40px #e100ff, 0 0 60px #f7b7e4, 0 0 10px #e100ff, 0 0 98px #ff00dd;
+}
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+.second-hand {
+  background-color: red;
+  height: 2px;
+  width: 50%;
+}
+.min-hand {
+  background-color: grey;
+  height: 3px;
+  width: 50%;
+}
+.hour-hand {
+  background-color: rgb(254, 218, 255);
+  height: 3px;
+  width: 50%;
+}
+.hand {
+  /* width: 50%;
+  height: 6px;
+  background: black; */
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+}
